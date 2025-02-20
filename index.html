@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Highest Grossing Films</title>
+</head>
+<body>
+    <div class="background">
+    <!-- Title -->
+        <div class="content">
+            <h1>Top Grossing <span>Films</span></h1>
+            <p>Explore the <span>legendary</span> movies.</p>
+        </div>
+
+        <!-- Search & Filters (Now takes up left half) -->
+        <div class="search-container">
+            <div class="filtering-container">
+                <input type="text" id="searchInput" placeholder="Search...">
+                <select id="filterYear">
+                    <option value="">Filter by Year</option>
+                </select>
+                <select id="filterDirector">
+                    <option value="">Filter by Director</option>
+                </select>
+                <select id="filterCountry">
+                    <option value="">Filter by Country</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Table Section (Also in left half) -->
+        <div class="main-table">
+            <table id="movies-table">
+                <thead>
+                    <tr>
+                        <th data-column="title">Title</th>
+                        <th data-column="year">Year</th>
+                        <th data-column="director">Director</th>
+                        <th data-column="box_office">Box Office</th>
+                        <th data-column="country">Country</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Movie data will be inserted dynamically -->
+                </tbody>
+            </table>
+        </div>
+
+
+
+            <!-- Right-Side Info Box -->
+    <div class="info-box">
+        <h2>Understanding Box Office Performance</h2>
+        <p>
+            Films generate income from several revenue streams, including theatrical exhibition, 
+            home video, television broadcast rights, and merchandising. However, theatrical box-office 
+            earnings are the primary metric for trade publications in assessing the success of a film, 
+            mostly because of the availability of the data compared to sales figures for home video 
+            and broadcast rights, but also because of historical practice.
+        </p>
+        <p>
+            Traditionally, war films, musicals, and historical dramas have been the most popular genres, 
+            but franchise films have been among the best performers of the 21st century. There is strong 
+            interest in the superhero genre, with eleven films in the Marvel Cinematic Universe featuring 
+            among the nominal top-earners. The most successful superhero film, <strong>Avengers: Endgame</strong>, 
+            is also the second-highest-grossing film on the nominal earnings chart.
+        </p>
+        <p>
+            Animated family films have performed consistently well, with Disney films enjoying lucrative 
+            re-releases prior to the home-video era. Disney also enjoyed later success with films such as 
+            <strong>Frozen</strong> and its sequel, <strong>Zootopia</strong>, and <strong>The Lion King</strong> (along with its remake). 
+        </p>
+    </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

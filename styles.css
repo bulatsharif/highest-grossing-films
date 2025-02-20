@@ -1,0 +1,200 @@
+/* Reset styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    overflow-y: auto; /* Allow scrolling */
+}
+
+/* Background with shadow effect */
+.background {
+    position: fixed; /* Keeps background fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Full screen height */
+    background: url("background_posters.jpeg") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column; /* Stack text above table */
+    align-items: flex-start; /* Align items to the left */
+    padding: 2vw;
+}
+
+/* Dark Shadow Effect on Background */
+.background::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.9) 30%, rgba(0, 0, 0, 0.9) 100%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Title and text section */
+.content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: left;
+    width: 50%; /* Ensures it takes half of the screen */
+    padding: 2vw;
+    font-size: 120%;
+    height: 8vw;
+}
+
+.content h1 {
+    font-size: 3em;
+    height: 4vw;
+}
+
+.content h1 span, .content p span {
+    color: #ffcc00; /* Golden/yellow highlight */
+    font-weight: bold;
+}
+
+/* Table container */
+.main-table {
+    position: relative;
+    z-index: 1;
+    width: 50%; /* Set table width to 50% */
+    height: 70vh; /* Set table height */
+    overflow-y: auto; /* Allow scrolling inside */
+    background: rgba(0, 0, 0, 0.7); /* Dark background for readability */
+    padding: 2vw;
+    border-radius: 10px;
+    color: white;
+}
+
+.search-container {
+    padding: 2vw;
+    text-align: center;
+    color: white;
+    z-index: 1;
+  }
+  
+  /* Styling for the search input field */
+  #searchInput {
+    width: 300px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px; /* Rounded edges for a modern look */
+    outline: none;
+    transition: box-shadow 0.3s ease; /* Smooth transition for focus effect */
+  }
+  
+  /* Focus effect for the search input field */
+  #searchInput:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Shadow effect on focus */
+  }
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid white;
+    text-align: left;
+}
+
+/* Search & Filtering Container */
+.search-container {
+    width: 50%; /* Limit to left half */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align elements to the left */
+    padding: 1vw;
+    color: white;
+    z-index: 1;
+}
+
+/* Right-Side Info Box */
+.info-box {
+    position: absolute;
+    right: 7vw;
+    top: 20vh;
+    z-index: 1;
+    width: 35%; /* Right half of the screen */
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    padding: 20px;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Ensure text stays inside box */
+.info-box h2 {
+    color: #ffcc00;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.info-box p {
+    margin-bottom: 10px;
+}
+
+/* Make sure content doesn't go beyond screen */
+@media (max-width: 1024px) {
+    .info-box {
+        width: 90%; /* On smaller screens, make it take most of the space */
+        right: 5vw;
+        top: 25vh;
+    }
+}
+
+
+/* Wrapper for search bar and filters */
+.filtering-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start; /* Align items to the left */
+}
+
+/* Search input */
+#searchInput {
+    flex: 1; /* Allows it to grow */
+    min-width: 200px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+/* Dropdown filters */
+.filtering-container select {
+    flex: 1; /* Allows them to shrink/grow */
+    min-width: 200px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+}
+
+
+
+thead th {
+    cursor: pointer; /* Indicate that the header is clickable */
+}
+
+th {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: bold;
+}
+
+tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
